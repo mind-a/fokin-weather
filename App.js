@@ -33,7 +33,6 @@ export default class extends React.Component {
       } = await Location.getCurrentPositionAsync();
       // Send to API and get Weather
       this.getWeather(latitude, longitude);
-      this.setState({isLoading: false});
     } catch (error) {
         Alert.alert("Can't find you." , "So Sad");
     }
